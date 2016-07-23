@@ -4,9 +4,9 @@ strace (ARMEB)
 * Download and extract the latest strace (v4.0.1 on 08/09/2015):
 
 ```
-wget https://downloads.sourceforge.net/project/strace/strace/4.10/strace-4.10.tar.xz
-tar xf strace-4.10.tar.xz
-cd strace-4.10/
+wget http://downloads.sourceforge.net/project/strace/strace/4.12/strace-4.12.tar.xz
+tar xf strace-4.12.tar.xz
+cd strace-4.12/
 ```
 
 * Edit v4l2.c to include an htole32() replacement before line 70 (print_pixelformat):
@@ -21,6 +21,12 @@ uint32_t htole32(uint32_t i)
           | (i & 0xff000000) >> 24;
    return result;
 }
+```
+
+* Edit /opt/armeb-linux/ti-puma5/usr/include/linux/audit.h and define _uu32 before line 265 (struct audit_status)
+
+```
+typedef unsigned int __u32;
 ```
 
 * Setup the build environment variables:
