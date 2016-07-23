@@ -1,11 +1,11 @@
 gdb and gdbserver (ARMEB)
 =========================
 
-* Download and extract the latest GDB (v7.9.1 on 08/09/2015):
+* Download and extract the latest GDB (v7.11.1 on 07/23/2015):
 
 ```
-wget https://ftp.gnu.org/gnu/gdb/gdb-7.9.1.tar.xz
-tar xf gdb-7.9.1.tar.xz
+wget https://ftp.gnu.org/gnu/gdb/gdb-7.11.1.tar.xz
+tar xf gdb-7.11.1.tar.xz
 ```
 
 * Comment lines 125 and 126 from /gdb-7.9.1/gdb/gnulib/import/mbrtowc.c (you can also set # define MB_CUR_MAX 1):
@@ -43,7 +43,7 @@ mv termcap.o /opt/armeb-linux/ti-puma5/lib/
 * Configure and cross compile gdb and gdbserver:
 
 ```
-cd ../gdb-7.9.1/
+cd ../gdb-7.11.1/
 ./configure --host=$TARGETMACH --target=$TARGETMACH
 make
 ```
