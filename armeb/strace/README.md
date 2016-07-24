@@ -1,7 +1,7 @@
 strace (ARMEB)
 ==============
 
-* Download and extract the latest strace (v4.0.1 on 08/09/2015):
+* Download and extract the latest strace (v4.12 on 07/23/2016):
 
 ```
 wget http://downloads.sourceforge.net/project/strace/strace/4.12/strace-4.12.tar.xz
