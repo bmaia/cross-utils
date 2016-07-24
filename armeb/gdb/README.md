@@ -1,7 +1,7 @@
 gdb and gdbserver (ARMEB)
 =========================
 
-* Download and extract the latest GDB (v7.11.1 on 07/23/2015):
+* Download and extract the latest GDB (v7.11.1 on 07/23/2016):
 
 ```
 wget https://ftp.gnu.org/gnu/gdb/gdb-7.11.1.tar.xz
