@@ -1,7 +1,7 @@
 Description
 ===========
 
-Download OpenWRT/LEDE SDK for a device that has the same arch/SOC as your target. On our case, let's use
+Download OpenWRT/LEDE SDK for a device that has the same arch/SOC as your target. On our case, let's use **ar71xx**:
 
 ```bash
 wget https://downloads.lede-project.org/releases/17.01.1/targets/ar71xx/generic/lede-sdk-17.01.1-ar71xx-generic_gcc-5.4.0_musl-1.1.16.Linux-x86_64.tar.xz
