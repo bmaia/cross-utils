@@ -45,7 +45,7 @@ Type ```make menuconfig``` again, find the package you want to build and select 
 make
 ```
 
-Now go to the **bin/packages/mips_24kc/base/** directory and check the newly created .ipk package. If you want to 
+Now go to the **bin/packages/mips_24kc/base/** directory and check the newly created .ipk package. If you want to use the standalone binaries, just extract the ipk using tar:
 
 ```bash
 $ cd bin/packages/mips_24kc/base/
