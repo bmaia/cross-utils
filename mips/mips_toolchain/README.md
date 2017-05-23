@@ -12,7 +12,7 @@ Follow the instructions from the OpenWRT/LEDE docs to compile packages using the
 
 Go to the SDK folder and then open the SDK's menu:
 
-```
+```bash
 make menuconfig
 ```
 
@@ -32,19 +32,20 @@ Save the configuration and then update the package lists
 
 Select the packages you want to compile:
 
-```
+```bash
 ./scripts/feeds install <packagename>
 ```
 
 Type ```make menuconfig``` again, find the package you want to build and select it using "m", save the config and compile the package using:
 
-```
+```bash
 make
 ```
 
 Now go to the **bin/packages/mips_24kc/base/** directory and check the newly created .ipk package. If you want to 
 
-```
+```bash
+$ cd bin/packages/mips_24kc/base/
 $ tar xvf strace_4.15-1_mips_24kc.ipk
 $ tar xvf data.tar.gz
 ./
@@ -66,3 +67,13 @@ MAKE_FLAGS := \
         CCOPT="$(TARGET_CFLAGS)" LDFLAGS+="-static"
 ```
 
+```bash
+make
+```
+
+Extract the .ipk package again and get the statically compiled binary:
+
+```bash
+$ file bin/packages/mips_24kc/base/usr/bin/strace 
+bin/packages/mips_24kc/base/usr/bin/strace: ELF 32-bit MSB executable, MIPS, MIPS32 rel2 version 1 (SYSV), statically linked, corrupted section header size
+```
